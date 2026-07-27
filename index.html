@@ -3,17 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=overlays-content" />
+    <meta name="theme-color" content="#1c1d1f" />
     <title>Telescope</title>
+    
+    <!-- Simulador do Telegram WebApp para enganar o script -->
+    <script>
+      window.Telegram = {
+        WebApp: {
+          initData: "query_id=AAHd89...&user=%7B%22id%22%3A123456789%2C%22first_name%22%3A%22User%22%7D",
+          initDataUnsafe: { user: { id: 123456789, first_name: "User" } },
+          version: "7.0",
+          platform: "tdesktop",
+          colorScheme: "dark",
+          themeParams: { bg_color: "#1c1d1f", text_color: "#ffffff" },
+          isExpanded: true,
+          viewportHeight: window.innerHeight,
+          viewportStableHeight: window.innerHeight,
+          ready: function(){},
+          expand: function(){},
+          close: function(){},
+          setHeaderColor: function(){},
+          setBackgroundColor: function(){},
+          enableClosingConfirmation: function(){}
+        }
+      };
+    </script>
+
     <link rel="stylesheet" crossorigin href="assets/index-2xN8LQ1z.css">
   </head>
-  <body style="background-color: #1c1d1f; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif;">
-    <div id="root">
-      <div style="text-align: center;">
-        <h2>Carregando Telescope...</h2>
-        <p>Se a tela persistir, estamos ajustando o script principal.</p>
-      </div>
-    </div>
+  <body style="background-color: #1c1d1f; margin: 0;">
+    <div id="root"></div>
     <script type="module" crossorigin src="assets/index-CkAElPEY.js"></script>
   </body>
 </html>
